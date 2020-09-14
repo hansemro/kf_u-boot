@@ -463,20 +463,20 @@ struct _partition {
 
 /* Add this as a partition layout toggle */
 static struct _partition partitions_x[] = {
-	{ "-", 128 },			//GPT
-	{ "xloader", 128 },		//p1
-	{ "bootloader", 256 },		//p2
-	{ "dkernel", 10*1024 },		//p3
-	{ "dfs", 192*1024 },		//p4
-	{ "recovery", 16*1024 },	//p5
-	{ "backup", 64*1024 },		//p6
-	{ "boot", 10*1024 },		//p7
-	{ "splash", 5*1024 },		//p8
-	{ "system", 764*1024 },		//p9 starts @ sector 609280 (512) align start 606208
-	{ "spacer", 1024 },		//p10
-	{ "cache", 512*1024 },		//p11 aligned to 4mb erase barrier
-	{ "userdata", 0 },		//p12 aligned to 4mb erase barrier
-	{ 0, 0 },
+ 	{ "-", 128 },			//GPT
+ 	{ "xloader", 128 },		//p1
+ 	{ "bootloader", 256 },		//p2
+ 	{ "dkernel", 10*1024 },		//p3
+ 	{ "dfs", 192*1024 },		//p4
+ 	{ "recovery", 16*1024 },	//p5
+ 	{ "backup", 64*1024 },		//p6
+ 	{ "boot", 10*1024 },		//p7
+ 	{ "splash", 5*1024 },		//p8
+	{ "system", 4619*1024 },	//p9
+	{ "userdata", 512*1024 },	//p10
+	{ "cache", 256*1024 },		//p11
+	{ "media", 1536*1024 },		//p12
+ 	{ 0, 0 },
 };
 
 static struct _partition partitions[] = {
