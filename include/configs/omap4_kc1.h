@@ -38,7 +38,7 @@
  * High Level Configuration Options
  */
 #define CONFIG_OMAP4KC1			1
-#define CONFIG_OMAP4KC1_VERSION		"v2.05"
+#define CONFIG_OMAP4KC1_VERSION		"l2.05"
 #define CONFIG_WELCOME_MSG		"[ PRESS POWER TO OPEN BOOTMENU ]"
 
 #include <configs/omap4_common.h>
