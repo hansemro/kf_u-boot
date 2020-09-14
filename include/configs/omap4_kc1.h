@@ -136,7 +136,7 @@
 #define CONFIG_FASTBOOT_COUNTDOWN_POLL_POWER 5
 
 /* long press power to turn on (in seconds) */
-#define CONFIG_LONGPRESS_POWERON         2
+#define CONFIG_LONGPRESS_POWERON         1
 
 // charger mode
 #define CONFIG_CHARGERMODE_ENABLE        1
