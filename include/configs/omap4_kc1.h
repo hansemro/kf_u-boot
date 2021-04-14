@@ -147,8 +147,10 @@
 #define MEMORY_BASE                      0x80000000
 #define CONFIG_ADDR_ATAGS                (MEMORY_BASE + 0x100)
 #define CONFIG_ADDR_DOWNLOAD             (MEMORY_BASE + 0x03000000)
-#define CONFIG_MACH_TYPE                 MACH_TYPE_OMAP_4430SDP
+//#define CONFIG_MACH_TYPE                 MACH_TYPE_OMAP_4430SDP
+#define CONFIG_MACH_TYPE                 2161
 #define DEVICE_TREE                      0x82f80000
+#define CONFIG_OF_LIBFDT
 #define CONFIG_ANDROID_BOOT_IMAGE        1
 
 /* env */
