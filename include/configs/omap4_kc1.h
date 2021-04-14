@@ -107,8 +107,8 @@
 #define CONFIG_ENV_IS_NOWHERE            1
 
 /* undef to save memory */
-#undef CONFIG_SYS_LONGHELP
-#undef CONFIG_SYS_HUSH_PARSER
+//#undef CONFIG_SYS_LONGHELP
+//#undef CONFIG_SYS_HUSH_PARSER
 
 /* USB */
 #undef CONFIG_MUSB_UDC
