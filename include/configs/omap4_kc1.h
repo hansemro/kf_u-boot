@@ -167,14 +167,16 @@
 \
 "mmcargs_old=setenv bootargs console=${console} mem=456M@0x80000000 init=/init vram=5M omapfb.vram=0:5M androidboot.console=ttyO2\0" \
 "mmcargs_new=setenv dtbootargs console=${console} ${chargermode}androidboot.wifimac=${idme_wifimac} androidboot.serialno=${idme_serialno} androidboot.hardware=otterx\0" \
+"ld_kernel_dtb=setenv dtbootargs ${dtbootargs} root=/dev/mmcblk0p9; load mmc 1:9 0x81000000 boot/zImage; load mmc 1:9 0x91000000 boot/omap4-kc1.dtb\0" \
 \
 "lcdmenu_fg_color=7\0" \
 "lcdmenu_bg_color=0\0" \
 "lcdmenu_width=0x28\0" \
 "lcdmenu_0=MAIN MENU\0" \
 "lcdmenuentry_00=<-- CONTINUE BOOT=lcdmenu hide; run mmcargs_old; run mmcargs_new; booti mmc1\0" \
-"lcdmenuentry_01=RECOVERY BOOT=lcdmenu hide; recoverymode; run mmcargs_old; run mmcargs_new; booti mmc1\0" \
-"lcdmenuentry_02=ADVANCED -->=lcdmenu show 1\0" \
+"lcdmenuentry_01=LINUX BOOT=lcdmenu hide; run mmcargs_new; run ld_kernel_dtb; bootz 0x81000000 - 0x91000000\0" \
+"lcdmenuentry_02=RECOVERY BOOT=lcdmenu hide; recoverymode; run mmcargs_old; run mmcargs_new; booti mmc1\0" \
+"lcdmenuentry_03=ADVANCED -->=lcdmenu show 1\0" \
 "lcdmenu_1=ADVANCED MENU\0" \
 "lcdmenuentry_10=<-- BACK=lcdmenu show 0\0" \
 "lcdmenuentry_11=CHARGER MODE:    #charger_mode_flag# =lcdmenu show #charger_mode_menu_id#\0" \
