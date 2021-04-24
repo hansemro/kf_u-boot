@@ -178,6 +178,7 @@
 "lcdmenuentry_02=RECOVERY BOOT=lcdmenu hide; recoverymode; run mmcargs_old; run mmcargs_new; booti mmc1\0" \
 "lcdmenuentry_03=USBBOOT=lcdmenu hide; kc1_usbboot\0" \
 "lcdmenuentry_04=ADVANCED -->=lcdmenu show 1\0" \
+"lcdmenuentry_05=POWER OFF=powerdown\0" \
 "lcdmenu_1=ADVANCED MENU\0" \
 "lcdmenuentry_10=<-- BACK=lcdmenu show 0\0" \
 "lcdmenuentry_11=CHARGER MODE:    #charger_mode_flag# =lcdmenu show #charger_mode_menu_id#\0" \
