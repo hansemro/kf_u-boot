@@ -1618,19 +1618,19 @@ int do_dump_gptimer(cmd_tbl_t *cmdtp, int flag, int argc, char * const argv[])
     return 0;
 };
 
-U_BOOT_CMD( dump_gpio, 2, 0, do_dump_gpio, "print gpiochip<N>'s registers.\n",
-        "<1|2|3|4|5|6>\n" );
-U_BOOT_CMD( dump_clockctl, 1, 0, dump_clock_control, "print clock control registers.\n", NULL );
-U_BOOT_CMD( dump_dss, 1, 0, dump_dss, "print DSS registers.\n", NULL );
-U_BOOT_CMD( dump_musb, 1, 0, dump_musb, "print MUSB registers.\n", NULL );
-U_BOOT_CMD( dump_ctl_gen_core, 1, 0, dump_control_general_core, "print registers.\n", NULL );
-U_BOOT_CMD( dump_ctl_gen_wkup, 1, 0, dump_control_general_wkup, "print registers.\n", NULL );
-U_BOOT_CMD( dump_ctl_padconf_core, 1, 0, dump_control_padconf_core, "print registers.\n", NULL );
-U_BOOT_CMD( dump_ctl_padconf_wkup, 1, 0, dump_control_padconf_wkup, "print registers.\n", NULL );
-U_BOOT_CMD( dump_mcspi, 2, 0, do_dump_mcspi, "print McSPI registers.\n",
-        "<1|2|3|4>\n" );
-U_BOOT_CMD( dump_twl6030, 1, 0, dump_i2c_twl6030, "print twl6030 registers.\n", NULL );
-U_BOOT_CMD( dump_smb347, 1, 0, dump_i2c_smb347, "print smb347 registers.\n", NULL );
-U_BOOT_CMD( dump_prcm, 1, 0, dump_prcm, "print prcm registers.\n", NULL );
-U_BOOT_CMD( dump_gptimer, 2, 0, do_dump_gptimer, "print GPTimer registers.\n",
-        "<timer_number>\nValid timer numbers are between 1 and 11 (inclusive)\n" );
+U_BOOT_CMD( dump_gpio, 2, 0, do_dump_gpio, "print gpiochip<N>'s registers.",
+        "<1|2|3|4|5|6>" );
+U_BOOT_CMD( dump_clockctl, 1, 0, dump_clock_control, "print clock control registers.", NULL );
+U_BOOT_CMD( dump_dss, 1, 0, dump_dss, "print DSS registers.", NULL );
+U_BOOT_CMD( dump_musb, 1, 0, dump_musb, "print MUSB registers.", NULL );
+U_BOOT_CMD( dump_ctl_gen_core, 1, 0, dump_control_general_core, "print registers.", NULL );
+U_BOOT_CMD( dump_ctl_gen_wkup, 1, 0, dump_control_general_wkup, "print registers.", NULL );
+U_BOOT_CMD( dump_ctl_padconf_core, 1, 0, dump_control_padconf_core, "print registers.", NULL );
+U_BOOT_CMD( dump_ctl_padconf_wkup, 1, 0, dump_control_padconf_wkup, "print registers.", NULL );
+U_BOOT_CMD( dump_mcspi, 2, 0, do_dump_mcspi, "print McSPI registers.",
+        "<1|2|3|4>" );
+U_BOOT_CMD( dump_twl6030, 1, 0, dump_i2c_twl6030, "print twl6030 registers.", NULL );
+U_BOOT_CMD( dump_smb347, 1, 0, dump_i2c_smb347, "print smb347 registers.", NULL );
+U_BOOT_CMD( dump_prcm, 1, 0, dump_prcm, "print prcm registers.", NULL );
+U_BOOT_CMD( dump_gptimer, 2, 0, do_dump_gptimer, "print GPTimer registers.",
+        "<timer_number>\nValid timer numbers are between 1 and 11 (inclusive)" );
