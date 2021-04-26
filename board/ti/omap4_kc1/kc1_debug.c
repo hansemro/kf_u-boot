@@ -1542,6 +1542,36 @@ RMEMC("CM_SSC_MODFREQDIV_DPLL_USB", 0x4A0081AC);
 #endif
 }
 
+int do_dump_gptimer(cmd_tbl_t *cmdtp, int flag, int argc, char * const argv[])
+{
+    ulong n;
+
+    if (argc != 2) {
+        printf("Usage: dump_gptimer %s\n", cmdtp->help);
+        return 1;
+    };
+
+    n = simple_strtoul(argv[1], NULL, 10);
+
+    switch (n) {
+        case 1: dump_gptimer_1_2_10(0x4A318000); break;
+        case 2: dump_gptimer_1_2_10(0x48032000); break;
+        case 3: dump_gptimer_3_4_5_6_7_8_9_11(0x48034000); break;
+        case 4: dump_gptimer_3_4_5_6_7_8_9_11(0x48036000); break;
+        case 5: dump_gptimer_3_4_5_6_7_8_9_11(0x49038000); break;
+        case 6: dump_gptimer_3_4_5_6_7_8_9_11(0x4903A000); break;
+        case 7: dump_gptimer_3_4_5_6_7_8_9_11(0x4903C000); break;
+        case 8: dump_gptimer_3_4_5_6_7_8_9_11(0x4903E000); break;
+        case 9: dump_gptimer_3_4_5_6_7_8_9_11(0x48038000); break;
+        case 10: dump_gptimer_1_2_10(0x58006000); break;
+        case 11: dump_gptimer_3_4_5_6_7_8_9_11(0x58008000); break;
+        default:
+            printf("Error: argument must be between 1 and 11 (inclusive)\n");
+            return 1;
+    }
+    return 0;
+};
+
 U_BOOT_CMD( dump_clockctl, 1, 0, dump_clock_control, "print clock control registers.\n", NULL );
 U_BOOT_CMD( dump_dss, 1, 0, dump_dss, "print DSS registers.\n", NULL );
 U_BOOT_CMD( dump_musb, 1, 0, dump_musb, "print MUSB registers.\n", NULL );
@@ -1552,3 +1582,5 @@ U_BOOT_CMD( dump_ctl_padconf_wkup, 1, 0, dump_control_padconf_wkup, "print regis
 U_BOOT_CMD( dump_twl6030, 1, 0, dump_i2c_twl6030, "print twl6030 registers.\n", NULL );
 U_BOOT_CMD( dump_smb347, 1, 0, dump_i2c_smb347, "print smb347 registers.\n", NULL );
 U_BOOT_CMD( dump_prcm, 1, 0, dump_prcm, "print prcm registers.\n", NULL );
+U_BOOT_CMD( dump_gptimer, 2, 0, do_dump_gptimer, "print GPTimer registers.\n",
+        "<timer_number>\nValid timer numbers are between 1 and 11 (inclusive)\n" );
