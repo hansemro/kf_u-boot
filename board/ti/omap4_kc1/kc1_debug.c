@@ -1,5 +1,6 @@
 #include <config.h>
 #include <common.h>
+#include <command.h>
 #include <asm/omap_common.h>
 #include <asm/arch/sys_proto.h>
 #include <twl6030.h>
@@ -7,7 +8,7 @@
 #include "kc1_debug.h"
 #include "pmic_smb347.h"
 
-//#define REG_DEBUG	1
+#define REG_DEBUG	1
 
 #ifdef REG_DEBUG
 #define SPACER "                             "
