@@ -74,7 +74,7 @@ RMEMB("GPIO_SETDATAOUT", base + 0x194);
 #endif
 }
 
-void dump_clock_control(void)
+int dump_clock_control(void)
 {
 #ifdef REG_DEBUG
 RMEMB("CM_DUCATI_DUCATI_CLKCTRL", (*prcm)->cm_mpu_m3_mpu_m3_clkctrl);
@@ -159,9 +159,10 @@ RMEMB("CM_L3INIT_HSUSBTLL_CLKCTRL", (*prcm)->cm_l3init_hsusbtll_clkctrl);
 RMEMB("CM_L3INIT_FSUSB_CLKCTRL", (*prcm)->cm_l3init_fsusb_clkctrl);
 RMEMB("CM_L3INIT_USBPHY_CLKCTRL", (*prcm)->cm_l3init_usbphy_clkctrl);
 #endif
+return 0;
 }
 
-void dump_dss(void)
+int dump_dss(void)
 {
 #ifdef REG_DEBUG
 RMEMC("DSS_REVISION", 0x58000000);
@@ -668,9 +669,10 @@ RMEMC("DSI2_PLL_SSC_CONFIGURATION1", 0x58005318);
 RMEMC("DSI2_PLL_SSC_CONFIGURATION2", 0x5800531C);
 #endif
 #endif
+return 0;
 }
 
-void dump_musb(void)
+int dump_musb(void)
 {
 #ifdef REG_DEBUG
 #if 0
@@ -824,9 +826,10 @@ RMEMB("HCOCPHWI", 0x4A0A9204);
 RMEMB("HCOCPSYS", 0x4A0A9210);
 #endif
 #endif
+return 0;
 }
 
-void dump_control_general_core(void)
+int dump_control_general_core(void)
 {
 #ifdef REG_DEBUG
 debug("*** DUMP CONTROL_GENERAL CORE REGS:\n");
@@ -939,9 +942,10 @@ RMEMB("CONTROL_GEN_CORE_REVISION", 0x4A0024f4);
 RMEMB("CONTROL_GEN_CORE_REVISION", 0x4A0024f8);
 RMEMB("CONTROL_GEN_CORE_REVISION", 0x4A0024fc);
 #endif
+return 0;
 }
 
-void dump_control_general_wkup(void)
+int dump_control_general_wkup(void)
 {
 #ifdef REG_DEBUG
 debug("*** DUMP CONTROL_GENERAL WKUP REGS:\n");
@@ -988,9 +992,10 @@ RMEMB("CONTROL_WKUP_CONF_DEBUG_SEL_TST_29", 0x4A30C4d4);
 RMEMB("CONTROL_WKUP_CONF_DEBUG_SEL_TST_30", 0x4A30C4d8);
 RMEMB("CONTROL_WKUP_CONF_DEBUG_SEL_TST_31", 0x4A30C4dc);
 #endif
+return 0;
 }
 
-void dump_control_padconf_core(void)
+int dump_control_padconf_core(void)
 {
 #ifdef REG_DEBUG
 debug("*** DUMP CONTROL_PAD_CONF CORE REGS:\n");
@@ -1163,9 +1168,10 @@ RMEMB("CONTROL_PADCONF_CORE_REVISION", 0x4A100704);
 RMEMB("CONTROL_PADCONF_CORE_REVISION", 0x4A100708);
 RMEMB("CONTROL_PADCONF_CORE_REVISION", 0x4A10070c);
 #endif
+return 0;
 }
 
-void dump_control_padconf_wkup(void)
+int dump_control_padconf_wkup(void)
 {
 #ifdef REG_DEBUG
 debug("*** DUMP CONTROL_PAD_CONF WKUP REGS:\n");
@@ -1211,6 +1217,7 @@ RMEMB("CONTROL_PADCONF_WKUP_REVISION", 0x4A31E63c);
 RMEMB("CONTROL_PADCONF_WKUP_REVISION", 0x4A31E640);
 RMEMB("CONTROL_PADCONF_WKUP_REVISION", 0x4A31E64c);
 #endif
+return 0;
 }
 
 void dump_mcspi(unsigned int base)
@@ -1262,7 +1269,7 @@ RMEMB("MCSPI_XFERLEVEL", base + 0x17c);
 #endif
 }
 
-void dump_i2c_twl6030(void)
+int dump_i2c_twl6030(void)
 {
 #ifdef REG_DEBUG
 	int index  = 0;
@@ -1282,9 +1289,10 @@ void dump_i2c_twl6030(void)
 		udelay(5000);
 	}
 #endif
+    return 0;
 }
 
-void dump_i2c_smb347(void)
+int dump_i2c_smb347(void)
 {
 #ifdef REG_DEBUG
 	int index  = 0;
@@ -1301,9 +1309,10 @@ void dump_i2c_smb347(void)
 		udelay(5000);
 	}
 #endif
+    return 0;
 }
 
-void dump_prcm(void)
+int dump_prcm(void)
 {
 #ifdef REG_DEBUG
 debug("*** DUMP INTRCONN_SOCKET_PRM:\n");
@@ -1403,6 +1412,7 @@ RMEMB("RM_L3INSTR_OCP_WP1_CONTEXT", 0x4A306e44);
 debug("*** DUMP IVAHD_PRM:\n");
 RMEMB("PM_IVAHD_PWRSTCTRL", 0x4A306f00);
 #endif
+return 0;
 }
 
 void dump_gptimer_1_2_10(unsigned int base)
