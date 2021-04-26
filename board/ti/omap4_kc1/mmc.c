@@ -1315,8 +1315,7 @@ int do_kc1_swap_partition_mode(cmd_tbl_t *cmdtp, int flag, int argc, char * cons
 	return do_swap_partition_mode(NULL);
 }
 
-U_BOOT_CMD( idme_settings, 3, 1, do_idme_settings, "idme_settings <bit> <value>\n", NULL );
-U_BOOT_CMD( kc1_swap_partition_mode, 1, 1, do_kc1_swap_partition_mode, "kc1_swap_partition_mode\n", NULL );
-U_BOOT_CMD( kc1_usbboot, 1, 1, do_kc1_usbboot, "kc1_usbboot\n", NULL );
-U_BOOT_CMD( kc1_emmcfix, 1, 1, do_kc1_emmcfix, "kc1_emmcfix\n", NULL );
-
+U_BOOT_CMD( idme_settings, 3, 1, do_idme_settings, "idme_settings <bit> <value>", NULL );
+U_BOOT_CMD( kc1_swap_partition_mode, 1, 1, do_kc1_swap_partition_mode, "kc1_swap_partition_mode", NULL );
+U_BOOT_CMD( kc1_usbboot, 1, 1, do_kc1_usbboot, "kc1_usbboot", NULL );
+U_BOOT_CMD( kc1_emmcfix, 1, 1, do_kc1_emmcfix, "kc1_emmcfix", NULL );

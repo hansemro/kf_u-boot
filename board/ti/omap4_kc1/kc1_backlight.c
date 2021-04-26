@@ -47,5 +47,4 @@ int do_setbacklight(cmd_tbl_t *cmdtp, int flag, int argc, char * const argv[])
 	return 0;
 }
 
-U_BOOT_CMD( setbacklight, 2, 0, do_setbacklight, "setbacklight - set brightness.\n", NULL );
-
+U_BOOT_CMD( setbacklight, 2, 0, do_setbacklight, "set brightness.", NULL );

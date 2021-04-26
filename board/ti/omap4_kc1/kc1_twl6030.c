@@ -142,5 +142,4 @@ int do_powerdown(cmd_tbl_t *cmdtp, int flag, int argc, char * const argv[])
 	return 0;
 }
 
-U_BOOT_CMD( powerdown, 1, 0, do_powerdown, "powerdown.\n", NULL );
-
+U_BOOT_CMD( powerdown, 1, 0, do_powerdown, "powerdown.", NULL );

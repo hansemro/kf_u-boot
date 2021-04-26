@@ -75,6 +75,6 @@ int do_setgreenled(cmd_tbl_t *cmdtp, int flag, int argc, char * const argv[])
     return setled(cmdtp, flag, argc, argv, LED_PWM1ON, LED_PWM1OFF);
 }
 
-U_BOOT_CMD( setgreenled, 2, 0, do_setgreenled, "setgreenled - set green led brightness.\n", NULL );
-U_BOOT_CMD( setamberled, 2, 0, do_setamberled, "setamberled - set amber led brightness.\n", NULL );
+U_BOOT_CMD( setgreenled, 2, 0, do_setgreenled, "setgreenled - set green led brightness.", NULL );
+U_BOOT_CMD( setamberled, 2, 0, do_setamberled, "setamberled - set amber led brightness.", NULL );
 

@@ -787,8 +787,8 @@ int do_fastboot(cmd_tbl_t *cmdtp, int flag, int argc, char * const argv[])
 
 U_BOOT_CMD(
 	fastboot,	2,	1,	do_fastboot,
-	"fastboot- use USB Fastboot protocol\n",
-	"fastboot\n"
-	"fastboot <fastboot_confirmed>\n"
+	"fastboot- use USB Fastboot protocol",
+	"fastboot"
+	"fastboot <fastboot_confirmed>"
 );
 
