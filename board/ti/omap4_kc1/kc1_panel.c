@@ -461,8 +461,7 @@ int do_kc1panel(cmd_tbl_t *cmdtp, int flag, int argc, char * const argv[])
 	return 0;
 }
 
-U_BOOT_CMD( kc1panel,	3,	1,	do_kc1panel,
-	"kc1 panel commands.",
+U_BOOT_CMD( kc1panel,	3,	1,	do_kc1panel, NULL,
 	"kc1panel [on|off|logo_set_index <index>|logo_reload]"
 );
 

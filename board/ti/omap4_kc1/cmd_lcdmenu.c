@@ -363,13 +363,4 @@ int do_lcdmenu(cmd_tbl_t *cmdtp, int flag, int argc, char *const argv[])
 }
 
 
-U_BOOT_CMD(
-	lcdmenu, 3, 1, do_lcdmenu,
-	"ANSI lcdmenu <show | hide | key>",
-	"lcdmenu show <index>\n"
-	"    - changes current index and resets active item to first in the list\n"
-	"lcdmenu hide\n"
-	"    - turns off the lcdmenu\n"
-	"lcdmenu key <up|down|select>\n"
-	"    - move highlight up/down or select active item"
-);
+U_BOOT_CMD( lcdmenu, 3, 1, do_lcdmenu, "ANSI lcdmenu <show | hide | key>", NULL );
