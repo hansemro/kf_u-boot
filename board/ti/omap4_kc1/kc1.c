@@ -319,9 +319,4 @@ int do_recoverymode(cmd_tbl_t *cmdtp, int flag, int argc, char * const argv[])
 	return 0;
 }
 
-U_BOOT_CMD(
-	recoverymode,	1,	1,	do_recoverymode,
-	"recoverymode - set recovery\n",
-	"recoverymode\n"
-);
-
+U_BOOT_CMD( recoverymode,	1,	1,	do_recoverymode, NULL, NULL);

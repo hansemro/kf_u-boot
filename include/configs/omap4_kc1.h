@@ -85,7 +85,7 @@
 #define CONFIG_BMP_16BPP		1
 #define CONFIG_BMP_32BPP		1
 #define CONFIG_VIDEO_BMP_GZIP		1
-#define CONFIG_SPLASH_SCREEN		1
+#define CONFIG_SPLASH_SCREEN		0
 #define CONFIG_SYS_VIDEO_LOGO_MAX_SIZE  0x00200000
 #define CONFIG_SYS_WHITE_ON_BLACK	1
 #define LCD_BPP				LCD_COLOR16
@@ -107,8 +107,8 @@
 #define CONFIG_ENV_IS_NOWHERE            1
 
 /* undef to save memory */
-//#undef CONFIG_SYS_LONGHELP
-//#undef CONFIG_SYS_HUSH_PARSER
+#undef CONFIG_SYS_LONGHELP
+#undef CONFIG_SYS_HUSH_PARSER
 
 /* USB */
 #undef CONFIG_MUSB_UDC
@@ -142,7 +142,7 @@
 #define CONFIG_CHARGERMODE_ENABLE        1
 
 // check "splash" partition for boot logo
-#define CONFIG_LOAD_SPLASH_FROM_EMMC     1
+#define CONFIG_LOAD_SPLASH_FROM_EMMC     0
 
 #define MEMORY_BASE                      0x80000000
 #define CONFIG_ADDR_ATAGS                (MEMORY_BASE + 0x100)
