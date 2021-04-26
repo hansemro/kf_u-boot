@@ -1542,3 +1542,13 @@ RMEMC("CM_SSC_MODFREQDIV_DPLL_USB", 0x4A0081AC);
 #endif
 }
 
+U_BOOT_CMD( dump_clockctl, 1, 0, dump_clock_control, "print clock control registers.\n", NULL );
+U_BOOT_CMD( dump_dss, 1, 0, dump_dss, "print DSS registers.\n", NULL );
+U_BOOT_CMD( dump_musb, 1, 0, dump_musb, "print MUSB registers.\n", NULL );
+U_BOOT_CMD( dump_ctl_gen_core, 1, 0, dump_control_general_core, "print registers.\n", NULL );
+U_BOOT_CMD( dump_ctl_gen_wkup, 1, 0, dump_control_general_wkup, "print registers.\n", NULL );
+U_BOOT_CMD( dump_ctl_padconf_core, 1, 0, dump_control_padconf_core, "print registers.\n", NULL );
+U_BOOT_CMD( dump_ctl_padconf_wkup, 1, 0, dump_control_padconf_wkup, "print registers.\n", NULL );
+U_BOOT_CMD( dump_twl6030, 1, 0, dump_i2c_twl6030, "print twl6030 registers.\n", NULL );
+U_BOOT_CMD( dump_smb347, 1, 0, dump_i2c_smb347, "print smb347 registers.\n", NULL );
+U_BOOT_CMD( dump_prcm, 1, 0, dump_prcm, "print prcm registers.\n", NULL );
