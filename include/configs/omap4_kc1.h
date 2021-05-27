@@ -38,7 +38,7 @@
  * High Level Configuration Options
  */
 #define CONFIG_OMAP4KC1			1
-#define CONFIG_OMAP4KC1_VERSION		"L2.12"
+#define CONFIG_OMAP4KC1_VERSION		"L2.13"
 #define CONFIG_WELCOME_MSG		"[ PRESS POWER TO OPEN BOOTMENU ]"
 
 #include <configs/omap4_common.h>
@@ -149,7 +149,7 @@
 #define CONFIG_ADDR_DOWNLOAD             (MEMORY_BASE + 0x03000000)
 //#define CONFIG_MACH_TYPE                 MACH_TYPE_OMAP_4430SDP
 #define CONFIG_MACH_TYPE                 2161
-#define DEVICE_TREE                      0x82f80000
+#define DEVICE_TREE                      0x84f80000
 #define CONFIG_OF_LIBFDT
 #define CONFIG_ANDROID_BOOT_IMAGE        1
 
@@ -158,17 +158,20 @@
 #define CONFIG_EXTRA_ENV_SETTINGS \
 "console=ttyO2,115200n8\0" \
 "fdt_high=0xffffffff\0" \
-"fdtaddr=0x80f80000\0" \
+"fdtaddr=0x84f80000\0" \
 "initrd_high=no\0" \
 "idme_wifimac=FFEEDDCCBBAA\0" \
 "idme_serialno=0123456789ABCDEF\0" \
 "idme_settings=0x00000000\0" \
 "mmcdev=1\0" \
+"bootpart=0xb\0" \
+"rootpart=0xc\0" \
+"loadaddr=0x82000000\0" \
 \
 "mmcargs_old=setenv bootargs console=${console} mem=456M@0x80000000 init=/init vram=5M omapfb.vram=0:5M androidboot.console=ttyO2\0" \
 "mmcargs_new=setenv dtbootargs console=${console} ${chargermode}androidboot.wifimac=${idme_wifimac} androidboot.serialno=${idme_serialno} androidboot.hardware=otterx\0" \
-"loadbootscript=load mmc 1:9 0x83000000 boot/boot.scr\0" \
-"bootscript=echo Running bootscript; source 0x83000000\0" \
+"loadbootscript=load mmc ${mmcdev}:${bootpart} ${loadaddr} /boot.scr\0" \
+"bootscript=echo Running bootscript; source ${loadaddr}\0" \
 \
 "lcdmenu_fg_color=7\0" \
 "lcdmenu_bg_color=0\0" \
